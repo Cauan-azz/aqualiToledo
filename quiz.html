@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Rio Toledo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><img
+            src="img/logo.png"
+            alt="Logo Rio Toledo"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="brand-fallback">
+            <span class="brand-pfc">PFC</span><strong>Rio Toledo</strong
+            ><small>Análise da Qualidade da Água</small>
+          </div></a
+        ><button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav">
+          <a href="index.html">Início</a><a href="projeto.html">O Projeto</a
+          ><a href="agua.html">A Água</a
+          ><a href="metodologia.html">Metodologia</a
+          ><a href="resultados.html">Resultados</a
+          ><a class="active" href="quiz.html">Quiz</a
+          ><a href="feedback.html">Feedback</a><a href="equipe.html">Equipe</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="quiz-page">
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">DESAFIO RIO TOLEDO</span>
+          <h1>Quiz da Água</h1>
+          <p>10 perguntas • 4 alternativas • 1 resposta correta</p>
+        </div>
+      </section>
+      <section class="container quiz-container">
+        <div id="quizStart" class="quiz-panel">
+          <div class="quiz-icon"><i class="fa-solid fa-brain"></i></div>
+          <h2>Teste seus conhecimentos!</h2>
+          <p>
+            Você terá 10 perguntas sobre água, saúde ambiental e conceitos
+            relacionados ao projeto.
+          </p>
+          <button class="btn btn-primary" id="startQuiz">
+            Começar quiz <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+
+        <div id="quizGame" class="quiz-panel hidden">
+          <div class="quiz-top">
+            <span id="questionCounter">Pergunta 1 de 10</span
+            ><span id="scoreLive">0 pontos</span>
+          </div>
+          <div class="progress"><div id="progressBar"></div></div>
+          <h2 id="questionText"></h2>
+          <div id="answers" class="answers"></div>
+          <div id="answerFeedback" class="answer-feedback"></div>
+          <button id="nextQuestion" class="btn btn-primary hidden">
+            Próxima <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div id="quizResult" class="quiz-panel hidden">
+          <div class="result-trophy"><i class="fa-solid fa-trophy"></i></div>
+          <span class="eyebrow green-text">RESULTADO</span>
+          <h2 id="finalTitle">Parabéns!</h2>
+          <div class="final-score">
+            <strong id="finalScore">0/10</strong><span>acertos</span>
+          </div>
+          <p id="finalMessage"></p>
+          <form id="rankingForm" class="ranking-form">
+            <label for="playerName">Seu nome para o ranking</label>
+            <input
+              id="playerName"
+              maxlength="30"
+              required
+              placeholder="Digite seu nome"
+            />
+            <button class="btn btn-green" type="submit">
+              Salvar no ranking <i class="fa-solid fa-trophy"></i>
+            </button>
+          </form>
+          <div id="rankingStatus"></div>
+          <a href="quiz.html" class="restart-link">Jogar novamente</a>
+        </div>
+
+        <div class="ranking-panel">
+          <div class="ranking-heading">
+            <div>
+              <span class="eyebrow green-text">PLACAR</span>
+              <h2>Ranking Rio Toledo</h2>
+            </div>
+            <button id="refreshRanking" class="icon-button" title="Atualizar">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+          </div>
+          <div id="rankingList" class="ranking-list">
+            <p class="muted">Carregando ranking...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-bottom">© 2026 Projeto Rio Toledo • PFC</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <script type="module">
+      import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+      const supabaseUrl = "https://eksaahdrejznamdizvzo.supabase.co";
+      const supabaseKey = "sb_publishable_shEkxO6dl9u6V0iItQmLvA_uQve6qgM";
+
+      const supabase = createClient(supabaseUrl, supabaseKey);
+
+      console.log("Supabase initialized successfully:", supabase);
+
+      const questions = [
+        {
+          question:
+            "Qual processo faz a água líquida passar para a atmosfera na forma de vapor?",
+          answers: ["Condensação", "Evaporação", "Precipitação", "Infiltração"],
+          correct: 1,
+        },
+        {
+          question:
+            "Qual é um dos maiores reservatórios de água doce do planeta?",
+          answers: ["Rios", "Lagos", "Geleiras e calotas de gelo", "Atmosfera"],
+          correct: 2,
+        },
+        {
+          question:
+            "Qual doença pode ser transmitida por água ou alimentos contaminados e é causada por Vibrio cholerae?",
+          answers: ["Cólera", "Dengue", "Leptospirose", "Malária"],
+          correct: 0,
+        },
+        {
+          question: "No ciclo da água, o que é precipitação?",
+          answers: [
+            "Entrada de água no solo",
+            "Formação de vapor",
+            "Retorno da água à superfície como chuva, neve ou granizo",
+            "Transformação de água salgada em doce",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "Qual destes é um exemplo de parâmetro físico-químico da água?",
+          answers: [
+            "pH",
+            "Nome do rio",
+            "Número de visitantes",
+            "Cor da placa da exposição",
+          ],
+          correct: 0,
+        },
+        {
+          question: "Por que a análise microbiológica da água é importante?",
+          answers: [
+            "Para medir apenas a temperatura",
+            "Para investigar microrganismos indicadores ou potencialmente relacionados à contaminação",
+            "Para descobrir a idade do rio",
+            "Para calcular a profundidade do solo",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Qual atitude contribui para a preservação dos recursos hídricos?",
+          answers: [
+            "Descartar resíduos no rio",
+            "Desperdiçar água potável",
+            "Evitar a poluição e usar a água de forma responsável",
+            "Retirar a vegetação das margens",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "Qual doença está relacionada ao protozoário Giardia duodenalis?",
+          answers: ["Giardíase", "Cólera", "Hepatite A", "Febre tifoide"],
+          correct: 0,
+        },
+        {
+          question:
+            "Por que diferentes pontos de coleta podem ser comparados em uma pesquisa de qualidade da água?",
+          answers: [
+            "Para aumentar o tamanho do site",
+            "Para observar possíveis diferenças nas condições da água ao longo do trecho estudado",
+            "Para evitar a análise das amostras",
+            "Para substituir os resultados laboratoriais",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Qual é uma das principais mensagens do Projeto Rio Toledo?",
+          answers: [
+            "A água não precisa de monitoramento",
+            "A qualidade da água e a preservação dos recursos hídricos são temas importantes para a sociedade",
+            "Somente os oceanos precisam ser preservados",
+            "Pesquisas ambientais não precisam de dados",
+          ],
+          correct: 1,
+        },
+      ];
+
+      let current = 0;
+      let score = 0;
+      let answered = false;
+
+      const $ = (id) => document.getElementById(id);
+
+      function show(el) {
+        el?.classList.remove("hidden");
+      }
+      function hide(el) {
+        el?.classList.add("hidden");
+      }
+
+      function renderQuestion() {
+        answered = false;
+        const q = questions[current];
+        $("questionCounter").textContent =
+          `Pergunta ${current + 1} de ${questions.length}`;
+        $("scoreLive").textContent =
+          `${score} ${score === 1 ? "ponto" : "pontos"}`;
+        $("progressBar").style.width =
+          `${((current + 1) / questions.length) * 100}%`;
+        $("questionText").textContent = q.question;
+        $("answers").innerHTML = "";
+        $("answerFeedback").textContent = "";
+        hide($("nextQuestion"));
+
+        q.answers.forEach((answer, index) => {
+          const button = document.createElement("button");
+          button.className = "answer";
+          button.type = "button";
+          button.innerHTML = `<span>${String.fromCharCode(65 + index)}</span>${answer}`;
+          button.addEventListener("click", () => selectAnswer(index, button));
+          $("answers").appendChild(button);
+        });
+      }
+
+      function selectAnswer(index, clicked) {
+        if (answered) return;
+        answered = true;
+
+        const q = questions[current];
+        document.querySelectorAll(".answer").forEach((button, i) => {
+          button.disabled = true;
+          if (i === q.correct) button.classList.add("correct");
+          if (i === index && i !== q.correct) button.classList.add("wrong");
+        });
+
+        if (index === q.correct) {
+          score++;
+          $("answerFeedback").textContent = "Resposta correta! Muito bem. 🌊";
+          $("answerFeedback").className = "answer-feedback correct-text";
+        } else {
+          $("answerFeedback").textContent =
+            `Resposta incorreta. A correta era ${String.fromCharCode(65 + q.correct)}.`;
+          $("answerFeedback").className = "answer-feedback wrong-text";
+        }
+
+        $("scoreLive").textContent =
+          `${score} ${score === 1 ? "ponto" : "pontos"}`;
+        show($("nextQuestion"));
+      }
+
+      function finishQuiz() {
+        hide($("quizGame"));
+        show($("quizResult"));
+        $("finalScore").textContent = `${score}/${questions.length}`;
+
+        if (score === 10) {
+          $("finalTitle").textContent = "Perfeito! 🏆";
+          $("finalMessage").textContent =
+            "Você acertou todas as perguntas. Excelente domínio do tema!";
+        } else if (score >= 8) {
+          $("finalTitle").textContent = "Excelente! 🌊";
+          $("finalMessage").textContent =
+            "Você demonstrou ótimo conhecimento sobre água e preservação.";
+        } else if (score >= 6) {
+          $("finalTitle").textContent = "Muito bom! 💧";
+          $("finalMessage").textContent =
+            "Você foi bem. Que tal explorar a página A Água e tentar novamente?";
+        } else {
+          $("finalTitle").textContent = "Continue aprendendo! 🌱";
+          $("finalMessage").textContent =
+            "Explore os conteúdos do site e tente o quiz novamente.";
+        }
+      }
+
+      async function loadRanking() {
+        const list = $("rankingList");
+        if (!list) return;
+
+        if (!supabase) {
+          list.innerHTML = `<p class="muted">Configure o Supabase em <code>js/config.js</code> para ativar o ranking.</p>`;
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("quiz_ranking")
+          .select("nome, pontuacao, tempo, criado_em")
+          .order("pontuacao", { ascending: false })
+          .order("tempo", { ascending: true })
+          .order("criado_em", { ascending: true })
+          .limit(10);
+
+        if (error) {
+          list.innerHTML = `<p class="muted">Não foi possível carregar o ranking.</p>`;
+          console.error(error);
+          return;
+        }
+
+        if (!data.length) {
+          list.innerHTML = `<p class="muted">Ainda não há participantes. Seja o primeiro!</p>`;
+          return;
+        }
+
+        list.innerHTML = data
+          .map((item, i) => {
+            const medal =
+              i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}º`;
+            return `<div class="ranking-row"><b>${medal}</b><span>${escapeHtml(item.nome)}</span><strong>${item.pontuacao}/10</strong></div>`;
+          })
+          .join("");
+      }
+
+      async function saveScore(event) {
+        event.preventDefault();
+        const name = $("playerName").value.trim();
+        const status = $("rankingStatus");
+
+        if (!name) return;
+
+        if (!supabase) {
+          status.textContent =
+            "Configure o Supabase em js/config.js antes de salvar.";
+          status.className = "form-status error";
+          return;
+        }
+
+        const startedAt = Number(
+          sessionStorage.getItem("quizStartedAt") || Date.now(),
+        );
+        const elapsedSeconds = Math.max(
+          1,
+          Math.round((Date.now() - startedAt) / 1000),
+        );
+
+        status.textContent = "Salvando...";
+        status.className = "form-status";
+
+        const { error } = await supabase.from("quiz_ranking").insert({
+          nome: name,
+          pontuacao: score,
+          tempo: elapsedSeconds,
+        });
+
+        if (error) {
+          status.textContent =
+            "Não foi possível salvar. Verifique as configurações do Supabase.";
+          status.className = "form-status error";
+          console.error(error);
+          return;
+        }
+
+        status.textContent = "Resultado salvo no ranking! 🏆";
+        status.className = "form-status success";
+        $("rankingForm").querySelector("button").disabled = true;
+        await loadRanking();
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#039;",
+            })[c],
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        $("startQuiz")?.addEventListener("click", () => {
+          current = 0;
+          score = 0;
+          sessionStorage.setItem("quizStartedAt", Date.now());
+          hide($("quizStart"));
+          show($("quizGame"));
+          hide($("quizResult"));
+          renderQuestion();
+        });
+
+        $("nextQuestion")?.addEventListener("click", () => {
+          current++;
+          if (current >= questions.length) finishQuiz();
+          else renderQuestion();
+        });
+
+        $("rankingForm")?.addEventListener("submit", saveScore);
+        $("refreshRanking")?.addEventListener("click", loadRanking);
+        loadRanking();
+      });
+    </script>
+  </body>
+</html>
