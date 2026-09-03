@@ -1,73 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Água | Rio Toledo</title><link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Rio Toledo - início">
-      <img src="img/AQUALI-TOLEDO (2).png" alt="Logo Rio Toledo" onerror="this.style.display='none'">
-      <div class="brand-fallback">
-        <strong>AQUALI - Toledo</strong>
-        <small>Análise da Qualidade da Água do Rio Toledo</small>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Água | Rio Toledo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+     <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Rio Toledo - início">
+          <img
+            src="img/AQUALI-TOLEDO (2).png"
+            alt="Logo Rio Toledo"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="brand-fallback">
+            <strong>AQUALI - Toledo</strong>
+            <small>Análise da Qualidade da Água do Rio Toledo</small>
+          </div>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav" id="mainNav">
+          <a href="index.html">Início</a>
+          <a href="projeto.html">O Projeto</a>
+          <a href="agua.html" class="active">A Água</a>
+          <a href="metodologia.html" >Metodologia</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="equipe.html">Equipe</a>
+        </nav>
       </div>
-    </a>
-<nav class="nav"><a href="index.html">Início</a><a href="projeto.html">O Projeto</a><a class="active" href="agua.html">A Água</a><a href="metodologia.html">Metodologia</a><a href="resultados.html">Resultados</a><a href="quiz.html">Quiz</a><a href="feedback.html">Feedback</a><a href="equipe.html">Equipe</a></nav>
-</div></header>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">EDUCAÇÃO AMBIENTAL</span>
+          <h1>A Água</h1>
+          <p>
+            Informações para compreender a água, seu ciclo, seus reservatórios e
+            sua relação com a saúde.
+          </p>
+        </div>
+      </section>
 
-<main>
-<section class="page-hero"><div class="container"><span class="eyebrow">EDUCAÇÃO AMBIENTAL</span><h1>A Água</h1><p>Informações para compreender a água, seu ciclo, seus reservatórios e sua relação com a saúde.</p></div></section>
+      <section class="container section content-section">
+        <article class="content-card" id="importancia">
+          <h2>
+            <i class="fa-solid fa-droplet title-symbol"></i> Importância da água
+          </h2>
+          <p>
+            A água é essencial para a vida e participa de processos biológicos,
+            ambientais, agrícolas, industriais e sociais. Rios, lagos,
+            reservatórios e águas subterrâneas sustentam ecossistemas e diversas
+            atividades humanas.
+          </p>
+          <div class="mini-grid">
+            <div>
+              <strong> Ecossistemas</strong>
+              <p>
+                Ambientes aquáticos e terrestres dependem da disponibilidade de
+                água.
+              </p>
+            </div>
+            <div>
+              <strong> Agricultura</strong>
+              <p>
+                A produção de alimentos depende de água em quantidade e
+                qualidade adequadas.
+              </p>
+            </div>
+            <div>
+              <strong> Sociedade</strong>
+              <p>
+                Abastecimento, higiene e saneamento dependem dos recursos
+                hídricos.
+              </p>
+            </div>
+            <div>
+              <strong>🔬 Ciência</strong>
+              <p>
+                O monitoramento da água permite identificar alterações e
+                orientar ações.
+              </p>
+            </div>
+          </div>
+        </article>
 
-<section class="container section content-section">
-<article class="content-card" id="importancia">
-<h2><i class="fa-solid fa-droplet title-symbol"></i> Importância da água</h2>
-<p>A água é essencial para a vida e participa de processos biológicos, ambientais, agrícolas, industriais e sociais. Rios, lagos, reservatórios e águas subterrâneas sustentam ecossistemas e diversas atividades humanas.</p>
-<div class="mini-grid"><div><strong> Ecossistemas</strong><p>Ambientes aquáticos e terrestres dependem da disponibilidade de água.</p></div><div><strong> Agricultura</strong><p>A produção de alimentos depende de água em quantidade e qualidade adequadas.</p></div><div><strong> Sociedade</strong><p>Abastecimento, higiene e saneamento dependem dos recursos hídricos.</p></div><div><strong>🔬 Ciência</strong><p>O monitoramento da água permite identificar alterações e orientar ações.</p></div></div>
-</article>
+        <article class="content-card" id="ciclo">
+          <h2>
+            <i class="fa-solid fa-arrows-rotate title-symbol"></i> Ciclo da água
+          </h2>
+          <p>
+            O ciclo da água é o movimento contínuo da água entre a superfície
+            terrestre, o solo, os corpos d’água e a atmosfera. Ele envolve
+            mudanças de estado físico e deslocamentos entre diferentes
+            reservatórios.
+          </p>
+          <div class="water-cycle">
+            <div class="cycle-step">
+              <b>Evaporação</b
+              ><small>A água passa para a atmosfera na forma de vapor.</small>
+            </div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-step">
+              <b>Condensação</b
+              ><small>O vapor se resfria e forma gotículas.</small>
+            </div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-step">
+              <b>Precipitação</b
+              ><small
+                >A água retorna à superfície como chuva, neve ou granizo.</small
+              >
+            </div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-step">
+              <b>Escoamento</b
+              ><small>Parte da água escoa para rios, lagos e oceanos.</small>
+            </div>
+            <div class="cycle-arrow">→</div>
+            <div class="cycle-step">
+              <b>Infiltração</b
+              ><small
+                >Outra parte penetra no solo e pode alimentar águas
+                subterrâneas.</small
+              >
+            </div>
+          </div>
+        </article>
 
-<article class="content-card" id="ciclo">
-<h2><i class="fa-solid fa-arrows-rotate title-symbol"></i> Ciclo da água</h2>
-<p>O ciclo da água é o movimento contínuo da água entre a superfície terrestre, o solo, os corpos d’água e a atmosfera. Ele envolve mudanças de estado físico e deslocamentos entre diferentes reservatórios.</p>
-<div class="water-cycle">
-<div class="cycle-step"><b>Evaporação</b><small>A água passa para a atmosfera na forma de vapor.</small></div>
-<div class="cycle-arrow">→</div>
-<div class="cycle-step"><b>Condensação</b><small>O vapor se resfria e forma gotículas.</small></div>
-<div class="cycle-arrow">→</div>
-<div class="cycle-step"><b>Precipitação</b><small>A água retorna à superfície como chuva, neve ou granizo.</small></div>
-<div class="cycle-arrow">→</div>
-<div class="cycle-step"><b>Escoamento</b><small>Parte da água escoa para rios, lagos e oceanos.</small></div>
-<div class="cycle-arrow">→</div>
-<div class="cycle-step"><b>Infiltração</b><small>Outra parte penetra no solo e pode alimentar águas subterrâneas.</small></div>
-</div>
-</article>
+        <article class="content-card" id="reservatorios">
+          <h2>
+            <i class="fa-solid fa-water title-symbol"></i> Maiores reservatórios
+            de água doce
+          </h2>
+          <p>
+            A maior parte da água do planeta é salgada. Entre os reservatórios
+            de água doce, a maior parcela encontra-se congelada em geleiras e
+            calotas de gelo, seguida por águas subterrâneas. Lagos, rios,
+            umidade do solo e outros reservatórios representam frações menores.
+          </p>
+          <div class="reservoir-grid">
+            <div class="reservoir">
+              <div class="reservoir-icon"></div>
+              <h3>Geleiras e calotas</h3>
+              <p>
+                Principal parcela da água doce armazenada na superfície
+                terrestre, em forma de gelo.
+              </p>
+            </div>
+            <div class="reservoir">
+              <div class="reservoir-icon"></div>
+              <h3>Lagos e rios</h3>
+              <p>
+                Representam uma pequena fração da água doce, mas são
+                fundamentais para a sociedade e a biodiversidade.
+              </p>
+            </div>
+            <div class="reservoir">
+              <div class="reservoir-icon"></div>
+              <h3>Aquíferos</h3>
+              <p>
+                Representam a principal fonte de água do planeta Terra, sendo o
+                maior aquífero o Sistema Aquífero Grande Amazônia (SAGA),
+                pertencente ao Brasil.
+              </p>
+            </div>
+          </div>
+        </article>
 
-<article class="content-card" id="reservatorios">
-<h2><i class="fa-solid fa-water title-symbol"></i> Maiores reservatórios de água doce</h2>
-<p>A maior parte da água do planeta é salgada. Entre os reservatórios de água doce, a maior parcela encontra-se congelada em geleiras e calotas de gelo, seguida por águas subterrâneas. Lagos, rios, umidade do solo e outros reservatórios representam frações menores.</p>
-<div class="reservoir-grid">
-<div class="reservoir"><div class="reservoir-icon"></div><h3>Geleiras e calotas</h3><p>Principal parcela da água doce armazenada na superfície terrestre, em forma de gelo.</p></div>
-<div class="reservoir"><div class="reservoir-icon"></div><h3>Lagos e rios</h3><p>Representam uma pequena fração da água doce, mas são fundamentais para a sociedade e a biodiversidade.</p></div>
-<div class="reservoir"><div class="reservoir-icon"></div><h3>Aquíferos</h3><p>Representam a principal fonte de água do planeta Terra, sendo o maior aquífero o Sistema Aquífero Grande Amazônia (SAGA), pertencente ao Brasil.</p></div>
-</div>
-</article>
-
-<article class="content-card" id="doencas">
-<h2><i class="fa-solid fa-virus title-symbol"></i> Doenças relacionadas à água contaminada</h2>
-<p>Água contaminada pode participar da transmissão de diferentes doenças, especialmente quando há presença de microrganismos patogênicos ou condições inadequadas de saneamento e higiene.</p>
-<div class="disease-grid">
-<div class="disease"><h3>Cólera</h3><p><b>Agente:</b> bactéria <i>Vibrio cholerae</i>.</p><p><b>Prevenção:</b> água segura, saneamento e higiene.</p></div>
-<div class="disease"><h3>Hepatite A</h3><p><b>Agente:</b> vírus da hepatite A.</p><p><b>Prevenção:</b> saneamento, higiene e vacinação.</p></div>
-<div class="disease"><h3>Giardíase</h3><p><b>Agente:</b> <i>Giardia duodenalis</i>.</p><p><b>Prevenção:</b> água tratada e higiene adequada.</p></div>
-<div class="disease"><h3>Amebíase</h3><p><b>Agente:</b> <i>Entamoeba histolytica</i>.</p><p><b>Prevenção:</b> saneamento, água segura e higiene.</p></div>
-<div class="disease"><h3>Febre tifoide</h3><p><b>Agente:</b> <i>Salmonella Typhi</i>.</p><p><b>Prevenção:</b> saneamento, higiene, água e alimentos seguros.</p></div>
-<div class="disease"><h3>Esquistossomose</h3><p><b>Agente:</b> <i>Schistosoma mansoni</i> no contexto brasileiro.</p><p><b>Prevenção:</b> saneamento e evitar contato com águas contaminadas em áreas de transmissão.</p></div>
-</div>
-</article>
-</section>
-</main>
-<footer class="footer"><div class="footer-bottom">© 2026 Projeto Rio Toledo • PFC</div></footer>
-<script src="js/script.js"></script>
-</body>
+        <article class="content-card" id="doencas">
+          <h2>
+            <i class="fa-solid fa-virus title-symbol"></i> Doenças relacionadas
+            à água contaminada
+          </h2>
+          <p>
+            Água contaminada pode participar da transmissão de diferentes
+            doenças, especialmente quando há presença de microrganismos
+            patogênicos ou condições inadequadas de saneamento e higiene.
+          </p>
+          <div class="disease-grid">
+            <div class="disease">
+              <h3>Cólera</h3>
+              <p><b>Agente:</b> bactéria <i>Vibrio cholerae</i>.</p>
+              <p><b>Prevenção:</b> água segura, saneamento e higiene.</p>
+            </div>
+            <div class="disease">
+              <h3>Hepatite A</h3>
+              <p><b>Agente:</b> vírus da hepatite A.</p>
+              <p><b>Prevenção:</b> saneamento, higiene e vacinação.</p>
+            </div>
+            <div class="disease">
+              <h3>Giardíase</h3>
+              <p><b>Agente:</b> <i>Giardia duodenalis</i>.</p>
+              <p><b>Prevenção:</b> água tratada e higiene adequada.</p>
+            </div>
+            <div class="disease">
+              <h3>Amebíase</h3>
+              <p><b>Agente:</b> <i>Entamoeba histolytica</i>.</p>
+              <p><b>Prevenção:</b> saneamento, água segura e higiene.</p>
+            </div>
+            <div class="disease">
+              <h3>Febre tifoide</h3>
+              <p><b>Agente:</b> <i>Salmonella Typhi</i>.</p>
+              <p>
+                <b>Prevenção:</b> saneamento, higiene, água e alimentos seguros.
+              </p>
+            </div>
+            <div class="disease">
+              <h3>Esquistossomose</h3>
+              <p>
+                <b>Agente:</b> <i>Schistosoma mansoni</i> no contexto
+                brasileiro.
+              </p>
+              <p>
+                <b>Prevenção:</b> saneamento e evitar contato com águas
+                contaminadas em áreas de transmissão.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-bottom">© 2026 Projeto Rio Toledo • PFC</div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
