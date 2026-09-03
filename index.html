@@ -1,138 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projeto Rio Toledo — Análise da Qualidade da Água">
-  <title>Rio Toledo | Análise da Qualidade da Água</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-<header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Rio Toledo - início">
-      <img src="img/AQUALI-TOLEDO (2).png" alt="Logo Rio Toledo" onerror="this.style.display='none'">
-      <div class="brand-fallback">
-        <strong>AQUALI - Toledo</strong>
-        <small>Análise da Qualidade da Água do Rio Toledo</small>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto Rio Toledo — Análise da Qualidade da Água"
+    />
+    <link
+      rel="shortcut icon"
+      href="img/AQUALI-TOLEDO (2).png"
+      type="image/x-icon"
+    />
+    <title>Aquali | Análise da Qualidade da Água</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Rio Toledo - início">
+          <img
+            src="img/AQUALI-TOLEDO (2).png"
+            alt="Logo Rio Toledo"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="brand-fallback">
+            <strong>AQUALI - Toledo</strong>
+            <small>Análise da Qualidade da Água do Rio Toledo</small>
+          </div>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav" id="mainNav">
+          <a href="index.html" class="active">Início</a>
+          <a href="projeto.html">O Projeto</a>
+          <a href="agua.html">A Água</a>
+          <a href="metodologia.html">Metodologia</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="equipe.html">Equipe</a>
+        </nav>
       </div>
-    </a>
+    </header>
 
-    <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">PROJETO DE PESQUISA</span>
+            <h1>Análise da qualidade da água do <em>Rio Toledo</em></h1>
+            <p>
+              Avaliação de parâmetros microbiológicos, físico-químicos e
+              parasitológicos, contribuindo para o conhecimento e a preservação
+              dos recursos hídricos.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="projeto.html"
+                >Conheça o projeto <i class="fa-solid fa-arrow-right"></i
+              ></a>
+              <a class="btn btn-light" href="quiz.html"
+                >Faça o quiz <i class="fa-solid fa-brain"></i
+              ></a>
+            </div>
+          </div>
 
-    <nav class="nav" id="mainNav">
-      <a href="index.html" class="active">Início</a>
-      <a href="projeto.html">O Projeto</a>
-      <a href="agua.html">A Água</a>
-      <a href="metodologia.html">Metodologia</a>
-      <a href="resultados.html">Resultados</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="equipe.html">Equipe</a>
-    </nav>
-  </div>
-</header>
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <i class="fa-solid fa-droplet"></i><b>ÁGUA</b
+              ><span>Vida e equilíbrio</span>
+            </div>
+            <div class="hero-badge">
+              <i class="fa-solid fa-flask"></i><b>CIÊNCIA</b
+              ><span>Conhecimento</span>
+            </div>
+            <div class="hero-badge">
+              <i class="fa-solid fa-leaf"></i><b>PROTEÇÃO</b
+              ><span>Preservação</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<main>
-  <section class="hero" id="inicio">
-    <div class="hero-overlay"></div>
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <span class="eyebrow">PROJETO DE PESQUISA</span>
-        <h1>Análise da qualidade da água do <em>Rio Toledo</em></h1>
-        <p>Avaliação de parâmetros microbiológicos, físico-químicos e parasitológicos, contribuindo para o conhecimento e a preservação dos recursos hídricos.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="projeto.html">Conheça o projeto <i class="fa-solid fa-arrow-right"></i></a>
-          <a class="btn btn-light" href="quiz.html">Faça o quiz <i class="fa-solid fa-brain"></i></a>
+      <section class="container section">
+        <div class="section-heading">
+          <span>CONHEÇA O TEMA</span>
+          <h2>A água está em tudo</h2>
+          <p>
+            Explore conteúdos rápidos sobre a importância da água, seu ciclo, os
+            principais reservatórios de água doce e doenças relacionadas à água
+            contaminada.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature-card" href="agua.html#importancia">
+            <div class="icon-circle blue">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h3>Importância da água</h3>
+            <p>
+              Por que a água é essencial para a vida, sociedade e ecossistemas?
+            </p>
+            <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="feature-card" href="agua.html#ciclo">
+            <div class="icon-circle cyan">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <h3>Ciclo da água</h3>
+            <p>
+              Entenda evaporação, condensação, precipitação, infiltração e
+              escoamento.
+            </p>
+            <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="feature-card" href="agua.html#reservatorios">
+            <div class="icon-circle green">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h3>Água doce</h3>
+            <p>
+              Conheça onde está armazenada a maior parte da água doce do
+              planeta.
+            </p>
+            <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="feature-card" href="agua.html#doencas">
+            <div class="icon-circle blue">
+              <i class="fa-solid fa-virus"></i>
+            </div>
+            <h3>Doenças transmitidas pela água</h3>
+            <p>
+              Conheça exemplos, formas de transmissão e medidas de prevenção.
+            </p>
+            <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="project-strip">
+        <div class="container strip-grid">
+          <div>
+            <span class="eyebrow">NOSSA PESQUISA</span>
+            <h2>Ciência para entender. Informação para preservar.</h2>
+            <p>
+              O projeto reúne análises e informações que ajudam a compreender a
+              qualidade da água e a importância do monitoramento ambiental.
+            </p>
+            <a class="btn btn-light" href="metodologia.html">Ver metodologia</a>
+          </div>
+          <div class="strip-stat">
+            <i class="fa-solid fa-microscope"></i><strong>3</strong
+            ><span>frentes de análise</span>
+          </div>
+          <div class="strip-stat">
+            <i class="fa-solid fa-location-dot"></i><strong>--</strong
+            ><span>pontos de coleta</span>
+          </div>
+          <div class="strip-stat">
+            <i class="fa-solid fa-vial"></i><strong>--</strong
+            ><span>amostras</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section quiz-promo">
+        <div>
+          <span class="eyebrow green-text">DESAFIO RIO TOLEDO</span>
+          <h2>Você conhece a água?</h2>
+          <p>
+            Responda 10 perguntas, teste seus conhecimentos e entre no ranking
+            dos visitantes.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="quiz.html"
+          >Começar o quiz <i class="fa-solid fa-trophy"></i
+        ></a>
+      </section>
+
+      <section class="container section feedback-promo">
+        <div class="feedback-art"><i class="fa-solid fa-comments"></i></div>
+        <div>
+          <span class="eyebrow">PARTICIPE</span>
+          <h2>O que você achou da pesquisa?</h2>
+          <p>Deixe sua opinião e ajude a tornar a exposição ainda melhor.</p>
+        </div>
+        <a class="btn btn-green" href="feedback.html"
+          >Enviar feedback <i class="fa-solid fa-paper-plane"></i
+        ></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Rio Toledo</strong>
+          <p>Análise da Qualidade da Água</p>
+        </div>
+        <div>
+          <strong>Explore</strong><a href="agua.html">A Água</a
+          ><a href="quiz.html">Quiz</a><a href="feedback.html">Feedback</a>
+        </div>
+        <div>
+          <strong>Pesquisa</strong><a href="projeto.html">O Projeto</a
+          ><a href="metodologia.html">Metodologia</a
+          ><a href="resultados.html">Resultados</a>
         </div>
       </div>
+      <div class="footer-bottom">© 2026 Projeto Rio Toledo • PFC</div>
+    </footer>
 
-      <div class="hero-badges">
-        <div class="hero-badge"><i class="fa-solid fa-droplet"></i><b>ÁGUA</b><span>Vida e equilíbrio</span></div>
-        <div class="hero-badge"><i class="fa-solid fa-flask"></i><b>CIÊNCIA</b><span>Conhecimento</span></div>
-        <div class="hero-badge"><i class="fa-solid fa-leaf"></i><b>PROTEÇÃO</b><span>Preservação</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container section">
-    <div class="section-heading">
-      <span>CONHEÇA O TEMA</span>
-      <h2>A água está em tudo</h2>
-      <p>Explore conteúdos rápidos sobre a importância da água, seu ciclo, os principais reservatórios de água doce e doenças relacionadas à água contaminada.</p>
-    </div>
-
-    <div class="feature-grid">
-      <a class="feature-card" href="agua.html#importancia">
-        <div class="icon-circle blue"><i class="fa-solid fa-droplet"></i></div>
-        <h3>Importância da água</h3>
-        <p>Por que a água é essencial para a vida, sociedade e ecossistemas?</p>
-        <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-      <a class="feature-card" href="agua.html#ciclo">
-        <div class="icon-circle cyan"><i class="fa-solid fa-arrows-rotate"></i></div>
-        <h3>Ciclo da água</h3>
-        <p>Entenda evaporação, condensação, precipitação, infiltração e escoamento.</p>
-        <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-      <a class="feature-card" href="agua.html#reservatorios">
-        <div class="icon-circle green"><i class="fa-solid fa-water"></i></div>
-        <h3>Água doce</h3>
-        <p>Conheça onde está armazenada a maior parte da água doce do planeta.</p>
-        <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-      <a class="feature-card" href="agua.html#doencas">
-        <div class="icon-circle blue"><i class="fa-solid fa-virus"></i></div>
-        <h3>Doenças transmitidas pela água</h3>
-        <p>Conheça exemplos, formas de transmissão e medidas de prevenção.</p>
-        <span>Explorar <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-    </div>
-  </section>
-
-  <section class="project-strip">
-    <div class="container strip-grid">
-      <div>
-        <span class="eyebrow">NOSSA PESQUISA</span>
-        <h2>Ciência para entender. Informação para preservar.</h2>
-        <p>O projeto reúne análises e informações que ajudam a compreender a qualidade da água e a importância do monitoramento ambiental.</p>
-        <a class="btn btn-light" href="metodologia.html">Ver metodologia</a>
-      </div>
-      <div class="strip-stat"><i class="fa-solid fa-microscope"></i><strong>3</strong><span>frentes de análise</span></div>
-      <div class="strip-stat"><i class="fa-solid fa-location-dot"></i><strong>--</strong><span>pontos de coleta</span></div>
-      <div class="strip-stat"><i class="fa-solid fa-vial"></i><strong>--</strong><span>amostras</span></div>
-    </div>
-  </section>
-
-  <section class="container section quiz-promo">
-    <div>
-      <span class="eyebrow green-text">DESAFIO RIO TOLEDO</span>
-      <h2>Você conhece a água?</h2>
-      <p>Responda 10 perguntas, teste seus conhecimentos e entre no ranking dos visitantes.</p>
-    </div>
-    <a class="btn btn-primary" href="quiz.html">Começar o quiz <i class="fa-solid fa-trophy"></i></a>
-  </section>
-
-  <section class="container section feedback-promo">
-    <div class="feedback-art"><i class="fa-solid fa-comments"></i></div>
-    <div>
-      <span class="eyebrow">PARTICIPE</span>
-      <h2>O que você achou da pesquisa?</h2>
-      <p>Deixe sua opinião e ajude a tornar a exposição ainda melhor.</p>
-    </div>
-    <a class="btn btn-green" href="feedback.html">Enviar feedback <i class="fa-solid fa-paper-plane"></i></a>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div><strong>Rio Toledo</strong><p>Análise da Qualidade da Água</p></div>
-    <div><strong>Explore</strong><a href="agua.html">A Água</a><a href="quiz.html">Quiz</a><a href="feedback.html">Feedback</a></div>
-    <div><strong>Pesquisa</strong><a href="projeto.html">O Projeto</a><a href="metodologia.html">Metodologia</a><a href="resultados.html">Resultados</a></div>
-  </div>
-  <div class="footer-bottom">© 2026 Projeto Rio Toledo • PFC</div>
-</footer>
-
-<script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
