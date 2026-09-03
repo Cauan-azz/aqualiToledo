@@ -13,26 +13,34 @@
     />
   </head>
   <body>
+   </head>
+  <body>
     <header class="header">
       <div class="container header-inner">
-        <a class="brand" href="index.html"
-          ><img
-            src="img/logo.png"
+        <a class="brand" href="index.html" aria-label="Rio Toledo - início">
+          <img
+            src="img/AQUALI-TOLEDO (2).png"
             alt="Logo Rio Toledo"
             onerror="this.style.display = 'none'"
           />
           <div class="brand-fallback">
-            <span class="brand-pfc">PFC</span><strong>Rio Toledo</strong
-            ><small>Análise da Qualidade da Água</small>
-          </div></a
-        ><button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-        <nav class="nav">
-          <a href="index.html">Início</a><a href="projeto.html">O Projeto</a
-          ><a href="agua.html">A Água</a
-          ><a href="metodologia.html">Metodologia</a
-          ><a href="resultados.html">Resultados</a
-          ><a class="active" href="quiz.html">Quiz</a
-          ><a href="feedback.html">Feedback</a><a href="equipe.html">Equipe</a>
+            <strong>AQUALI - Toledo</strong>
+            <small>Análise da Qualidade da Água do Rio Toledo</small>
+          </div>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav" id="mainNav">
+          <a href="index.html">Início</a>
+          <a href="projeto.html">O Projeto</a>
+          <a href="agua.html">A Água</a>
+          <a href="metodologia.html">Metodologia</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="quiz.html" class="active">Quiz</a>
+          <a href="equipe.html">Equipe</a>
         </nav>
       </div>
     </header>
@@ -289,19 +297,19 @@
         $("finalScore").textContent = `${score}/${questions.length}`;
 
         if (score === 10) {
-          $("finalTitle").textContent = "Perfeito! 🏆";
+          $("finalTitle").textContent = "Perfeito!";
           $("finalMessage").textContent =
             "Você acertou todas as perguntas. Excelente domínio do tema!";
         } else if (score >= 8) {
-          $("finalTitle").textContent = "Excelente! 🌊";
+          $("finalTitle").textContent = "Excelente!";
           $("finalMessage").textContent =
             "Você demonstrou ótimo conhecimento sobre água e preservação.";
         } else if (score >= 6) {
-          $("finalTitle").textContent = "Muito bom! 💧";
+          $("finalTitle").textContent = "Muito bom!";
           $("finalMessage").textContent =
             "Você foi bem. Que tal explorar a página A Água e tentar novamente?";
         } else {
-          $("finalTitle").textContent = "Continue aprendendo! 🌱";
+          $("finalTitle").textContent = "Continue aprendendo!";
           $("finalMessage").textContent =
             "Explore os conteúdos do site e tente o quiz novamente.";
         }
