@@ -382,7 +382,7 @@
         status.textContent = "Salvando...";
         status.className = "form-status";
 
-        const { error } = await supabase.from("quiz_ranking").insert({
+        const { error } = await supabase.from("ranking").insert({
           nome: name,
           pontuacao: score,
           tempo: elapsedSeconds,
