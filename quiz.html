@@ -330,7 +330,7 @@
         }
 
         const { data, error } = await supabase
-          .from("quiz_ranking")
+          .from("ranking")
           .select("nome, pontuacao, tempo, criado_em")
           .order("pontuacao", { ascending: false })
           .order("tempo", { ascending: true })
