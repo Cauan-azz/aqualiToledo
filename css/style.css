@@ -642,14 +642,13 @@ img {
 }
 .result-cards i {
   display: block;
-  color: var(--blue);
-  font-size: 25px;
+  color: var();
   margin-bottom: 8px;
 }
 .result-cards strong {
   display: block;
   color: var(--dark);
-  font-size: 32px;
+  font-size: 20px;
 }
 .result-cards span {
   font-size: 11px;
@@ -700,6 +699,57 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 27px;
+}
+.imagens.coleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.imagens.coleta img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.imagens.tabelas.resultados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.imagens.tabelas.resultados img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .imagens.coleta {
+        gap: 16px;
+        width: 90%;
+    }
+
+    .imagens.coleta img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .imagens.tabelas.resultados {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 25px;
+    }
 }
 .person-card h3 {
   color: var(--dark);
