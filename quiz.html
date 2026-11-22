@@ -145,14 +145,14 @@
       const questions = [
         {
           question:
-            "Qual processo faz a água líquida passar para a atmosfera na forma de vapor?",
-          answers: ["Condensação", "Evaporação", "Precipitação", "Infiltração"],
+            "O fósforo em excesso nos ambientes aquáticos pode contribuir para:",
+          answers: ["Salinização", "Eutrofização", "Bioacumulação", "Infiltração"],
           correct: 1,
         },
         {
           question:
-            "Qual é um dos maiores reservatórios de água doce do planeta?",
-          answers: ["Rios", "Lagos", "Geleiras e calotas de gelo", "Atmosfera"],
+            "Qual é um dos maiores reservatórios líquidos de água doce do planeta?",
+          answers: ["Rios", "Lagos", "Aquíferos", "Geleiras e calotas de gelo"],
           correct: 2,
         },
         {
@@ -173,21 +173,21 @@
         },
         {
           question:
-            "Qual destes é um exemplo de parâmetro físico-químico da água?",
+            "O que a turbidez representa?",
           answers: [
-            "pH",
-            "Nome do rio",
-            "Número de visitantes",
-            "Cor da placa da exposição",
+            "O grau de transparência da água.",
+            "A quantidade de oxigênio dissolvido.",
+            "A temperatura da água.",
+            "A quantidade de bactérias presentes.",
           ],
           correct: 0,
         },
         {
           question: "Por que a análise microbiológica da água é importante?",
           answers: [
-            "Para medir apenas a temperatura",
+            "Para medir apenas os coliformes totais",
             "Para investigar microrganismos indicadores ou potencialmente relacionados à contaminação",
-            "Para descobrir a idade do rio",
+            "Para descobrir a indicadores de odor do rio",
             "Para calcular a profundidade do solo",
           ],
           correct: 1,
@@ -211,23 +211,23 @@
         },
         {
           question:
-            "Por que diferentes pontos de coleta podem ser comparados em uma pesquisa de qualidade da água?",
+            "O que pode acontecer com o oxigênio dissolvido quando há grande quantidade de matéria orgânica na água?",
           answers: [
-            "Para aumentar o tamanho do site",
-            "Para observar possíveis diferenças nas condições da água ao longo do trecho estudado",
-            "Para evitar a análise das amostras",
-            "Para substituir os resultados laboratoriais",
+            "Sempre aumenta.",
+            "Pode diminuir devido à decomposição da matéria orgânica.",
+            "Transforma-se em fósforo.",
+            "Não sofre nenhuma alteração.",
           ],
           correct: 1,
         },
         {
           question:
-            "Qual é uma das principais mensagens do Projeto Rio Toledo?",
+            "Qual é uma das principais mensagens do Projeto AQUALI - Rio Toledo?",
           answers: [
-            "A água não precisa de monitoramento",
+            "A água não precisa de monitoramento, pois é sempre limpa e potável para a população.",
             "A qualidade da água e a preservação dos recursos hídricos são temas importantes para a sociedade",
-            "Somente os oceanos precisam ser preservados",
-            "Pesquisas ambientais não precisam de dados",
+            "Somente os oceanos precisam ser preservados, pois os rios não são afetados pela poluição.",
+            "Pesquisas ambientais não precisam de dados, pois são irrelevantes para a sociedade.",
           ],
           correct: 1,
         },
@@ -352,7 +352,7 @@
           .map((item, i) => {
             const medal =
               i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}º`;
-            return `<div class="ranking-row"><b>${medal}</b><span>${escapeHtml(item.nome)}</span><strong>${item.pontuacao}/10</strong></div>`;
+            return `<div class="ranking-row"><b>${medal}</b><span>${escapeHtml(item.nome)}</span><strong>${item.pontuacao}/10 - ${item.tempo}s</strong></div>`;
           })
           .join("");
       }
